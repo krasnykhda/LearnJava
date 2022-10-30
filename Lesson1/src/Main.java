@@ -5,7 +5,7 @@ public class Main {
         MyList<Integer> list = new MyLinkedList<Integer>();
 
         for (int i = 0; i < 50; i++) {
-            list.add(i);
+            list.add(i,0);
         }
         System.out.println("   ");
         var size = list.getSize();
