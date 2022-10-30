@@ -72,7 +72,13 @@ public class MyLinkedList<E> implements MyList, MyQueue {
         for (int i = 0; i < index; i++) {
             node = node.getPrev();
         }
-        node.getPrev().setNext(node.getNext());
+        if (node.getPrev() != null) {
+            node.getPrev().setNext(node.getNext());
+
+        } else {
+            tail = node.getPrev();
+        }
+
         if (node.getNext() != null) {
             node.getNext().setPrev(node.getPrev());
 
@@ -101,7 +107,11 @@ public class MyLinkedList<E> implements MyList, MyQueue {
     @Override
     public E poll() {
         Node node = head;
-        head.getPrev().setNext(head.getNext());
+        if (node.getPrev() != null) {
+            node.getPrev().setNext(head.getNext());
+        } else {
+            tail = node.getNext();
+        }
         head = head.getPrev();
         size--;
         return (E) node.getElement();

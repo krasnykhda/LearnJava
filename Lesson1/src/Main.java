@@ -1,7 +1,3 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,10 +5,13 @@ public class Main {
         MyList<Integer> list = new MyLinkedList<Integer>();
 
         for (int i = 0; i < 50; i++) {
-            list.add(i, 0);
+            list.add(i);
         }
         System.out.println("   ");
-
+        var size = list.getSize();
+        for (int i = 0; i < size - 2; i++) {
+            list.remove(0);
+        }
         for (int i = 0; i < list.getSize(); i++) {
             System.out.println(list.get(i));
         }
@@ -32,7 +31,7 @@ public class Main {
             queue.put(i);
         }
         System.out.println("   ");
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 50; i++) {
             System.out.println(queue.poll());
         }
 
