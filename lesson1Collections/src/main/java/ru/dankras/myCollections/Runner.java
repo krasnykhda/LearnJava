@@ -1,19 +1,7 @@
-package ru.dankras;
+package ru.dankras.myCollections;
 
-
-
-import ru.dankras.myCollections.MyArrayList;
-import ru.dankras.myCollections.MyLinkedList;
-import ru.dankras.myCollections.MyList;
-import ru.dankras.myCollections.MyQueue;
-
-import java.io.IOException;
-
-
-
-public class Main {
-
-    public static void main(String[] args) throws IOException {
+public class Runner {
+    public static void main(String[] args) {
         MyList<Integer> list = new MyLinkedList<Integer>();
 
         for (int i = 0; i < 50; i++) {
