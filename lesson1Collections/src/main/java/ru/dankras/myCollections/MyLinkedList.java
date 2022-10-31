@@ -51,7 +51,7 @@ public class MyLinkedList<E> implements MyList, MyQueue {
 
     @Override
     public E get(int index) {
-        if (index > size - 1 && size != 0) {
+        if (index > size - 1) {
             throw new IndexOutOfBoundsException();
         }
         Node<E> node = head;

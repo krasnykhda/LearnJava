@@ -2,8 +2,10 @@ package ru.dankras;
 
 
 
+import ru.dankras.myCollections.MyArrayList;
 import ru.dankras.myCollections.MyLinkedList;
 import ru.dankras.myCollections.MyList;
+import ru.dankras.myCollections.MyQueue;
 
 import java.io.IOException;
 
@@ -19,14 +21,14 @@ public class Main {
         }
         System.out.println("   ");
         var size = list.size();
-       /* for (int i = 0; i < size ; i++) {
+        for (int i = 0; i < size ; i++) {
             list.remove(0);
-        }*/
-        for (int i = 0; i < list.size(); i++) {
+        }
+        for (int i = 0; i < list.size()-2; i++) {
             System.out.println(list.get(i));
         }
 
-        /*list = new MyArrayList<>();
+        list = new MyArrayList<>();
         for (int i = 0; i < 50; i++) {
             list.add(i, 0);
         }
@@ -43,6 +45,6 @@ public class Main {
         System.out.println("   ");
         for (int i = 0; i < 50; i++) {
             System.out.println(queue.poll());
-        }*/
+        }
     }
 }
