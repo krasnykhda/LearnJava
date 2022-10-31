@@ -1,3 +1,5 @@
+package my.collections;
+
 public interface MyQueue<E> {
     void put(E object);
 
@@ -5,5 +7,5 @@ public interface MyQueue<E> {
 
     E peek();
 
-    int getSize();
+    int size();
 }

@@ -1,3 +1,5 @@
+package my.collections;
+
 public interface MyList<E> {
     void add(E object);
 
@@ -7,5 +9,5 @@ public interface MyList<E> {
 
     void remove(int index);
 
-    int getSize();
+    int size();
 }

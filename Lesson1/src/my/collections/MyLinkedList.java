@@ -1,3 +1,5 @@
+package my.collections;
+
 public class MyLinkedList<E> implements MyList, MyQueue {
     private Node<E> head;
     private Node<E> tail;
@@ -89,7 +91,7 @@ public class MyLinkedList<E> implements MyList, MyQueue {
     }
 
     @Override
-    public int getSize() {
+    public int size() {
         return size;
     }
 

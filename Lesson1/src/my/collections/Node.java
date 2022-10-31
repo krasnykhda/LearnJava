@@ -1,3 +1,5 @@
+package my.collections;
+
 public class Node<E> {
     Node<E> next;
     Node<E> prev;
