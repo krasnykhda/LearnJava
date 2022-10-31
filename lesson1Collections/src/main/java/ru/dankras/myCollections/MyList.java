@@ -1,4 +1,4 @@
-package my.collections;
+package ru.dankras.myCollections;
 
 public interface MyList<E> {
     void add(E object);

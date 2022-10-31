@@ -1,4 +1,4 @@
-package my.collections;
+package ru.dankras.myCollections;
 
 public class Node<E> {
     Node<E> next;

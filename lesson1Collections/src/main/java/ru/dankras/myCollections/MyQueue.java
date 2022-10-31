@@ -1,4 +1,4 @@
-package my.collections;
+package ru.dankras.myCollections;
 
 public interface MyQueue<E> {
     void put(E object);

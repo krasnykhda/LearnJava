@@ -1,4 +1,4 @@
-package my.collections;
+package ru.dankras.myCollections;
 
 public class MyLinkedList<E> implements MyList, MyQueue {
     private Node<E> head;
@@ -23,7 +23,10 @@ public class MyLinkedList<E> implements MyList, MyQueue {
 
     @Override
     public void add(Object object, int index) {
-        if (index > size - 1 && size != 0) {
+        if (index == size) {
+            add(object);
+            return;
+        } else if (index > size && size != 0) {
             throw new IndexOutOfBoundsException();
         }
         Node<E> newNode = new Node<E>(object);
@@ -36,19 +39,13 @@ public class MyLinkedList<E> implements MyList, MyQueue {
             node = node.getPrev();
         }
         newNode.setPrev(node);
-        if (node != null) {
+        if (node.getNext() != null) {
             newNode.setNext(node.getNext());
-            if (node.getNext() != null) {
-                node.getNext().setPrev(newNode);
-            }
-            node.setNext(newNode);
-        }
-        if (newNode.getNext() == null) {
+            node.getNext().setPrev(newNode);
+        } else {
             head = newNode;
         }
-        if (newNode.getPrev() == null) {
-            tail = newNode;
-        }
+        node.setNext(newNode);
         size++;
     }
 
@@ -78,7 +75,7 @@ public class MyLinkedList<E> implements MyList, MyQueue {
             node.getPrev().setNext(node.getNext());
 
         } else {
-            tail = node.getPrev();
+            tail = node.getNext();
         }
 
         if (node.getNext() != null) {
